@@ -1,0 +1,10 @@
+{"identifier":"Teste-001","description":"Description","sector":"Sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":5,"_id":"GXCZqX81FD64IQmM"}
+{"description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2,"_id":"H89mzcj2rsIKZKDL"}
+{"_id":"Teste-002","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
+{"$$deleted":true,"_id":"Teste-002"}
+{"_id":"Teste-002","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
+{"_id":"Teste-002","description":"toleranceToIdealTemperature","sector":"toleranceToIdealTemperature","minimumTemperature":123456789,"maximumTemperature":123456789,"idealTemperature":123456789,"toleranceToIdealTemperature":123456789}
+{"$$deleted":true,"_id":"Teste-002"}
+{"$$deleted":true,"_id":"GXCZqX81FD64IQmM"}
+{"$$deleted":true,"_id":"H89mzcj2rsIKZKDL"}
+{"_id":"Teste-002","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
