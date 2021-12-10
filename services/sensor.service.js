@@ -1,6 +1,7 @@
 "use strict";
 
 const DbMixin = require("../mixins/db.mixin");
+const csvMixin = require('../mixins/csv.mixin');
 
 /**
  * @typedef {import('moleculer').Context} Context Moleculer's Context
@@ -13,7 +14,7 @@ module.exports = {
 	/**
 	 * Mixins
 	 */
-	mixins: [DbMixin("sensor")],
+	mixins: [DbMixin("sensor"), csvMixin],
 
 	/**
 	 * Settings
@@ -106,6 +107,11 @@ module.exports = {
 			async handler(ctx) {
 				const doc = await this.adapter.findById(ctx.params._id);
 				const json = await this.transformDocuments(ctx, ctx.params, doc);
+
+				const currentTemperature = await this.readLastTemperatureCsv(ctx.params._id);
+
+				json.currentTemperature = Number(currentTemperature.temperature);
+
 				await this.entityChanged("found", json, ctx);
 
 				return json;
@@ -155,8 +161,28 @@ module.exports = {
 
 				return json;
 			}
+		},
+		
+		listSensor: {
+			rest: "GET /list/",
+
+			async handler(ctx) {
+				const data = await ctx.call('sensor.list');
+
+				const sensors = data.rows;
+
+				const sensorsWithTemperature = sensors.map(async sensor => {
+					const currentTemperature = await this.readLastTemperatureCsv(sensor._id);
+					sensor.currentTemperature = Number(currentTemperature.temperature);
+					return sensor;
+				});
+
+				return Promise.all(sensorsWithTemperature);
+			}
 		}
+	
 	},
+
 
 	/**
 	 * Methods

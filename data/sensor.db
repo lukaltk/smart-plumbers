@@ -1,1 +1,2 @@
+{"_id":"Teste-001","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
 {"_id":"Teste-002","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}

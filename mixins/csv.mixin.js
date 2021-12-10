@@ -61,6 +61,19 @@ module.exports = {
 
       return data;
 
+    },
+
+    async readLastTemperatureCsv(id) {
+
+      const folder = `./csv/${id}`
+      
+      const files = fs.readdirSync(folder);
+      const file = files.sort().reverse()[0];
+      const date = file.split('.')[0]
+
+      const temperature = await this.readCsv(id, date);
+
+      return  temperature[temperature.length - 1];
     }
 
   },
