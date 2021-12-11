@@ -1,2 +1,7 @@
 {"_id":"Teste-001","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
 {"_id":"Teste-002","description":"description","sector":"sector","minimumTemperature":1,"maximumTemperature":10,"idealTemperature":5,"toleranceToIdealTemperature":2}
+{"_id":"Sensor-1","description":"Sensor deve operar em temperaturas abaixas","sector":"Refrigeração","minimumTemperature":-100,"maximumTemperature":0,"idealTemperature":-50,"toleranceToIdealTemperature":25}
+{"_id":"Sensor-1","description":"Sensor deve operar em temperaturas baixas","sector":"Refrigeração","minimumTemperature":-100,"maximumTemperature":0,"idealTemperature":-50,"toleranceToIdealTemperature":25}
+{"_id":"Sensor-2","description":"Sensor deve operar em temperaturas moderadas","sector":"Laboratório","minimumTemperature":-50,"maximumTemperature":50,"idealTemperature":0,"toleranceToIdealTemperature":25}
+{"_id":"Sensor-3","description":"Sensor deve operar em temperaturas altas","sector":"Caldeiraria","minimumTemperature":0,"maximumTemperature":100,"idealTemperature":50,"toleranceToIdealTemperature":25}
+{"_id":"Sensor-2","description":"Sensor deve operar em temperaturas moderadas","sector":"Laboratório","minimumTemperature":-50,"maximumTemperature":50,"idealTemperature":0,"toleranceToIdealTemperature":25}
